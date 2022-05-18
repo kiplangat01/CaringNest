@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,SubmitField,ValidationError,BooleanField
-from wtforms.validators import Required,Email,EqualTo
+from wtforms.validators import DataRequired,Email,EqualTo
 
 from ..models import User
 from wtforms import ValidationError
@@ -8,10 +8,10 @@ from wtforms import ValidationError
 #Registration Form
 
 class RegistrationForm(FlaskForm): 
-  email = StringField('Enter your email address',validators=[Required(),Email()])
-  username = StringField('Enter your preffered username',validators = [Required()])
-  password = PasswordField('Password',validators = [Required(), EqualTo('confirm_password',message = 'Passwords must match')])
-  confirm_password = PasswordField('Confirm Password',validators = [Required(),Length(min=8,max=20)])
+  email = StringField('Enter your email address',validators=[DataRequired(),Email()])
+  username = StringField('Enter your preffered username',validators = [DataRequired()])
+  password = PasswordField('Password',validators = [DataRequired(), EqualTo('confirm_password',message = 'Passwords must match')])
+  confirm_password = PasswordField('Confirm Password',validators = [DataRequired()])
   submit = SubmitField('Sign Up')
 
 
@@ -21,8 +21,8 @@ class RegistrationForm(FlaskForm):
       raise ValidationError('There is an account already created with that email.')
 
 class LoginForm(FlaskForm):
-  email = StringField('Enter your Email Address',validators=[Required(),Email()])
-  password = PasswordField('Password',validators =[Required()])
+  email = StringField('Enter your Email Address',validators=[DataRequired(),Email()])
+  password = PasswordField('Password',validators =[DataRequired()])
   remember = BooleanField('Remember me')
   submit = SubmitField('Login')
 
