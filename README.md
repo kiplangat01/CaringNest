@@ -2,11 +2,9 @@
 
 ## Description
 
-Basic flask application starter files
+CaringNest
 
 ## Author
-
-[Mugera Hughes](https://github.com/mugerah/)
 
 ### Running the Application
 
@@ -30,10 +28,10 @@ Basic flask application starter files
 
 ## Contact Information
 
-For any further inquiries or contributions or comments, reach me at [Mugera Hughes](https://github.com/MugeraH)
+For any further inquiries or contributions or comments, reach out at
 
 ### License
 
-[MIT License](https://github.com/MugeraH/flask_code/blob/main/license)
+[MIT License]()
 
-Copyright (c) 2021
+Copyright (c) 2022
