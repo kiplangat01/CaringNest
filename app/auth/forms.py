@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,SubmitField,ValidationError,BooleanField
 from wtforms.validators import DataRequired,Email,EqualTo
 
-from ..models import User
+from ..models import Donor
 from wtforms import ValidationError
 
 #Registration Form
@@ -17,7 +17,7 @@ class RegistrationForm(FlaskForm):
 
 #Validating the user email
   def validate_user_email(self,data_field): #making sure an email address is used once
-    if User.query.filter_by(user_email = data_field.data).first(): 
+    if Donor.query.filter_by(user_email = data_field.data).first(): 
       raise ValidationError('There is an account already created with that email.')
 
 class LoginForm(FlaskForm):
