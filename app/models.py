@@ -8,12 +8,8 @@ from . import db
 
 
 
-@login_manager.Donor_loader
+@login_manager.user_loader
 def load_user(user_id):
-    """
-    @login_manager.user_loader Passes in a user_id to this function
-    Function queries the database and gets a user's id as a response
-    """
     return Donor.query.get(int(user_id))
 
 
@@ -61,7 +57,7 @@ class Donor(UserMixin,db.Model):
         return f'User {self.username}'
     
     
-class Doctor(db.model):
+class Doctor(db.Model):
     
     id = db.Column(db.Integer, primary_key = True)
     first_name = db.Column(db.String(255))
