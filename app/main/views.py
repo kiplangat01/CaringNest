@@ -1,4 +1,5 @@
-from flask import render_template,request,redirect,url_for,abort,flash
+from flask import abort, flash, redirect, render_template, request, url_for
+
 from . import main
 
 
@@ -7,3 +8,5 @@ def index():
 
 
     return render_template('index.html')
+
+    
