@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form method="POST">
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card mb-4">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Personal details</h5>
+          </div>
+          <div class="card-body">
+            <form>
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form6Example1" class="form-control" />
+                    <label class="form-label" for="form6Example1">First name</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text" id="form6Example2" class="form-control" />
+                    <label class="form-label" for="form6Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Text input -->
+              <div class="form-outline mb-4">
+                <input type="email" id="form6Example3" class="form-control" />
+                <label class="form-label" for="form6Example3">Email</label>
+              </div>
+  
+              <!-- Text input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="form6Example4" class="form-control" />
+                <label class="form-label" for="form6Example4">Location</label>
+              </div>
+  
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="number" id="form6Example5" class="form-control" />
+                <label class="form-label" for="form6Example5">Age</label>
+              </div>
+  
+              <!-- Number input -->
+              <div class="form-outline mb-4">
+                <input type="number" id="form6Example6" class="form-control" />
+                <label class="form-label" for="form6Example6">Phone Number</label>
+              </div>
+
+  
+              <hr class="my-4" />
+  
+              <h5 class="mb-4">Gender</h5>
+  
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm3"
+                  checked />
+                <label class="form-check-label" for="checkoutForm3">
+                Male
+                </label>
+              </div>
+  
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  Female
+                </label>
+            </div>
+
+
+            <h5 class="mb-4">Blood Type</h5>
+  
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm3" />
+                <label class="form-check-label" for="checkoutForm3">
+                <span>A</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm3" />
+                <label class="form-check-label" for="checkoutForm3">
+                <span>A-</span>
+                </label>
+              </div>
+  
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>AB</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>AB-</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>B</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>B-</span>
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>O</span>
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkoutForm4" />
+                <label class="form-check-label" for="checkoutForm4">
+                  <span>O-</span>
+                </label>
+            </div>
+  
+              
+              <button class="btn btn-primary btn-lg" type="submit">
+                Proceed to checkout
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      
+      </div>
+    </form>
+  {% endblock %}

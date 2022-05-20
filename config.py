@@ -1,5 +1,6 @@
 import os
 
+
 class Config:
     # UPLOADED_PHOTOS_DEST ='app/static/photos'
 

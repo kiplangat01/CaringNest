@@ -1,9 +1,10 @@
-from flask import render_template,redirect,url_for,flash,request
-from . import  auth
-from .forms import RegistrationForm,LoginForm
+from flask import flash, redirect, render_template, request, url_for
+from flask_login import login_required, login_user, logout_user
+
 from .. import db
-from flask_login import login_user,logout_user,login_required
-from ..models import Donor,Doctor
+from ..models import Doctor, Donor
+from . import auth
+from .forms import LoginForm, RegistrationForm
 
 
 #View functions
@@ -21,7 +22,7 @@ def login():
     flash('You have been logged in!')
   
   title = "Application login"
-  return render_template('auth/login.html',form = login_form,title = title)
+  return render_template('auth/login.html',login_form = login_form,title = title)
 
 #Registration route
 @auth.route('/register',methods = ["GET","POST"])
